@@ -48,11 +48,14 @@ $('#box').on('touchmove', function (e) {
         return false
     }
 })
+$('#box').on('touchend', function (e) {
+    console.log("over")
+})
 window.addEventListener('deviceorientation', function (e) {
     var gamma = e.gamma;
     if (Math.abs(gamma) > 1) {
         flag = false;
-        box.style.tranform = 'rotateY(' + gamma * 3 + 'deg)';
+        box.style.transform = 'rotateY(' + gamma * 3 + 'deg)';
     } else {
         flag = true;
     }

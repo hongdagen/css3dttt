@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>css3d</title>
-    <link rel="stylesheet" type="" href="./css/index.css">
-    <script src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
-</head>
-
-<body>
-    <audio id="audio">
+{% extends 'layout.html' %}
+{% block title %}My Page{% endblock %}
+{% block head %}
+{% parent %}
+    
+{% endblock %}
+{% block content %}
+     <audio id="audio">
         <source src="./music/bgm.mp3" type="audio/mpeg">
     </audio>
     <div id="btn">⏸️</div>
@@ -40,6 +34,4 @@
         </div>
     </div>
     <script src="./js/index.js"></script>
-</body>
-
-</html>
+{% endblock %}
